@@ -1,0 +1,20 @@
+[2023-06-30T09:44:28.965+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: BigData_Pipeline.store_metadata_in_cloud_sql_task manual__2023-06-30T09:44:13+00:00 [queued]>
+[2023-06-30T09:44:28.974+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: BigData_Pipeline.store_metadata_in_cloud_sql_task manual__2023-06-30T09:44:13+00:00 [queued]>
+[2023-06-30T09:44:28.974+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-06-30T09:44:28.988+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): store_metadata_in_cloud_sql_task> on 2023-06-30 09:44:13+00:00
+[2023-06-30T09:44:28.994+0000] {standard_task_runner.py:57} INFO - Started process 3108 to run task
+[2023-06-30T09:44:28.998+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'BigData_Pipeline', 'store_metadata_in_cloud_sql_task', 'manual__2023-06-30T09:44:13+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpp4a5pmtw']
+[2023-06-30T09:44:28.998+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask store_metadata_in_cloud_sql_task
+[2023-06-30T09:44:29.015+0000] {logging_mixin.py:149} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2023-06-30T09:44:29.056+0000] {task_command.py:410} INFO - Running <TaskInstance: BigData_Pipeline.store_metadata_in_cloud_sql_task manual__2023-06-30T09:44:13+00:00 [running]> on host 656f1a73f746
+[2023-06-30T09:44:29.150+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='BigData_Pipeline' AIRFLOW_CTX_TASK_ID='store_metadata_in_cloud_sql_task' AIRFLOW_CTX_EXECUTION_DATE='2023-06-30T09:44:13+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-06-30T09:44:13+00:00'
+[2023-06-30T09:44:29.643+0000] {logging_mixin.py:149} INFO - Getting data from XCom...
+[2023-06-30T09:44:29.655+0000] {logging_mixin.py:149} INFO - date: 20151210
+[2023-06-30T09:44:29.655+0000] {logging_mixin.py:149} INFO - Storing metadata in Cloud SQL...
+[2023-06-30T09:44:29.746+0000] {logging_mixin.py:149} INFO - Connecting to Cloud SQL...
+[2023-06-30T09:44:29.746+0000] {logging_mixin.py:149} INFO - pool: <sqlalchemy.engine.base.Connection object at 0x7f70ec03f2d0>
+[2023-06-30T09:44:30.675+0000] {logging_mixin.py:149} INFO - Metadata loaded to Cloud SQL
+[2023-06-30T09:44:30.676+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-06-30T09:44:30.686+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=BigData_Pipeline, task_id=store_metadata_in_cloud_sql_task, execution_date=20230630T094413, start_date=20230630T094428, end_date=20230630T094430
+[2023-06-30T09:44:30.733+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-30T09:44:30.754+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
